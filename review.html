@@ -69,6 +69,9 @@
 								<option value="#">2014</option>
 							</select>
 						</div>
+						
+						
+						
 						<div class="movie-list">
 							<div class="movie">
 								<figure class="movie-poster"><img src="dummy/thumb-3.jpg" alt="#"></figure>
@@ -110,7 +113,12 @@
 								<div class="movie-title"><a href="single.html">Dear Comrade</a></div>
 								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
 							</div>
+
+							
 						</div> <!-- .movie-list -->
+
+
+
 
 						<div class="pagination">
 							<a href="#" class="page-number prev"><i class="fa fa-angle-left"></i></a>
@@ -121,9 +129,11 @@
 							<a href="#" class="page-number">5</a>
 							<a href="#" class="page-number next"><i class="fa fa-angle-right"></i></a>
 						</div>
+
 					</div>
 				</div> <!-- .container -->
 			</main>
+
 			<footer class="site-footer">
 				<div class="container">
 				<!--<div class="row">
@@ -141,7 +151,31 @@
 			</footer>
 		</div>
 		<!-- Default snippet for navigation -->
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+
+		<script>
+
+			var items =$('.movie-list .movie');
+			var numItems = items.length;
+			var perPage = 8;
+
+			items.slice(perpage).hide();
+
+			$('pagination').pagination({
+				items: numItems,
+				itemsOnpage: perPage,
+				prevText:"<",
+				nextText:">",
+				onPageClick : function(pageNumber){
+					var showForm = perPage * (pageNumber - 1);
+					var showTO = showFrom + perPage;
+					items.hide().slice(showForm, showTo).show();
+				}
+			});
+
+
+		</script>
 
 
 		<script src="js/jquery-1.11.1.min.js"></script>
