@@ -113,13 +113,28 @@
 								<div class="movie-title"><a href="single.html">Dear Comrade</a></div>
 								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
 							</div>
+							<div class="movie">
+								<figure class="movie-poster"><img src="dummy/thumb-1.jpg" alt="#"></figure>
+								<div class="movie-title"><a href="single.html">Jersey</a></div>
+								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
+							</div>
+							<div class="movie">
+								<figure class="movie-poster"><img src="dummy/thumb-2.jpg" alt="#"></figure>
+								<div class="movie-title"><a href="single.html">Saaho</a></div>
+								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
+							</div>
+							<div class="movie">
+								<figure class="movie-poster"><img src="dummy/thumb-3.jpg" alt="#"></figure>
+								<div class="movie-title"><a href="single.html">Miss India</a></div>
+								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
+							</div>
 
 							
 						</div> <!-- .movie-list -->
+                        <div class="pagination"></div>
 
 
-
-
+<!-- 
 						<div class="pagination">
 							<a href="#" class="page-number prev"><i class="fa fa-angle-left"></i></a>
 							<span class="page-number current">1</span>
@@ -128,7 +143,7 @@
 							<a href="#" class="page-number">4</a>
 							<a href="#" class="page-number">5</a>
 							<a href="#" class="page-number next"><i class="fa fa-angle-right"></i></a>
-						</div>
+						</div> -->
 
 					</div>
 				</div> <!-- .container -->
@@ -160,17 +175,17 @@
 			var numItems = items.length;
 			var perPage = 8;
 
-			items.slice(perpage).hide();
+			items.slice(perPage).hide();
 
-			$('pagination').pagination({
-				items: numItems,
+			$('.pagination').pagination({
+				items: (numItems/perPage),
 				itemsOnpage: perPage,
 				prevText:"<",
 				nextText:">",
 				onPageClick : function(pageNumber){
-					var showForm = perPage * (pageNumber - 1);
-					var showTO = showFrom + perPage;
-					items.hide().slice(showForm, showTo).show();
+					var showFrom = perPage * (pageNumber - 1);
+					var showTo = showFrom + perPage;
+					items.hide().slice(showFrom, showTo).show();
 				}
 			});
 
