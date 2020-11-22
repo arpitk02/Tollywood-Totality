@@ -73,10 +73,10 @@ foreach ($res1 as $m) {
 
 						<div class="content">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<figure class="movie-poster"><img src="mimages/<?php echo $m['m_img'] ?>" alt="#" style="    width: 100%;"></figure>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-8">
 									<h2 class="movie-title"><?php echo $m['movie_title'] ?></h2>
 									<div class="movie-summary">
 										<p><?php echo $m['m_sdes'] ?></p>
