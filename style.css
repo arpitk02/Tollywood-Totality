@@ -1731,3 +1731,63 @@ ul.arrow {
       color: #ffaa3c; }
   .site-footer .colophon {
     padding-top: 30px; }
+
+.star{
+    width: 22px;
+    /* padding: 13px; */
+    margin: 10px;
+    /* margin-top: 8px; */
+    margin-bottom: -3px;
+}
+.rate{
+   font-size: 22px;
+}
+
+.srch{
+  text-align: right;
+}
+.srch input{
+    background-color: #f0f0f0;
+    border: none;
+    border-left: 1px solid #eeeeef;
+    border-radius: 0;
+    font-family: inherit;
+    font-weight: 300;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    padding: 10px 0;
+    outline: none;
+}
+.srch input.active {
+    width: 200px;
+    visibility: visible;
+    opacity: 1;
+    padding: 10px;
+}
+input:focus{
+  outline: none;
+}
+.srch button {
+    background-color: #ffaa3c;
+    border: none;
+    border-left: 1px solid #eeeeef;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -5px;
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    padding: 10px;
+    width: 40px;
+    color: white;
+    }
+.srch button.active {
+    background-color: #f0f0f0;
+    color: #848383;
+}

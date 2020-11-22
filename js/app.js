@@ -15,7 +15,13 @@
 
 			$parent.find("input").toggleClass("active").focus();
 		});
+        
+        $(".srch button").click(function(){
+			$(this).toggleClass("active");
+			var $parent = $(this).parent(".srch");
 
+			$parent.find("input").toggleClass("active").focus();
+		});
 
 		$(".slider").flexslider({
 			controlNav: false,
